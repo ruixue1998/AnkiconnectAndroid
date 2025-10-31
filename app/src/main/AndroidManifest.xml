@@ -55,7 +55,7 @@
                 android:resource="@xml/file_provider_paths" />
         </provider>
 
-        <service android:name=".Service" />
+        <service android:name=".Service" android:exported="true" />
     </application>
 
 </manifest>
