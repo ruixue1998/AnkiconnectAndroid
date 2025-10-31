@@ -3,8 +3,8 @@ name: Android CI
 on:
   push:
     branches:
-      - main  # 默认的触发事件，通常是 push 到 main 分支
-  workflow_dispatch:  # 允许手动触发工作流
+      - main
+  workflow_dispatch:
 
 jobs:
   build:
@@ -23,7 +23,7 @@ jobs:
         run: ./gradlew assembleRelease
 
       - name: Upload APK
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: apk
           path: app/build/outputs/apk/release/app-release.apk
